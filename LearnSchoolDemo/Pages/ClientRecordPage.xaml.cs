@@ -73,7 +73,7 @@ namespace LearnSchoolDemo.Pages
             }
             else
             {
-                MessageBox.Show("Ошибка в данных", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Все поля должны быть заполнены!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

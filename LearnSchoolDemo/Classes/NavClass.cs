@@ -9,6 +9,7 @@ namespace LearnSchoolDemo.Classes
     public class NavClass
     {
         public static bool isAuth = false;
+        public static bool isRed = false;
         public static MainWindow main;
         public static List<NavComponentsClass> navs = new List<NavComponentsClass>();
 

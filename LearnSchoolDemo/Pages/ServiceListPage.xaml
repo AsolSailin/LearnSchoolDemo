@@ -99,8 +99,8 @@
 
         <TextBlock x:Name="tbCount" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
-        <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
+        <!--<StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Bottom">
             <Button Content="Картинки" HorizontalAlignment="Center" Height="30" Width="60" Click="Image_Click"/>
-        </StackPanel>
+        </StackPanel>-->
     </Grid>
 </Page>

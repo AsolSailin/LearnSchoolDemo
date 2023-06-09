@@ -21,6 +21,17 @@ namespace LearnSchoolDemo.ADOApp
             }
         }
 
+        public Visibility VisibilityMethodForImg
+        {
+            get
+            {
+                if (NavClass.isRed)
+                    return Visibility.Visible;
+                else
+                    return Visibility.Collapsed;
+            }
+        }
+
         public decimal CostDiscountMethod
         {
             get

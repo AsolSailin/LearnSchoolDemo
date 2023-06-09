@@ -47,7 +47,7 @@
                 </Border>
             </StackPanel>
 
-            <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center">
+            <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Visibility="{Binding VisibilityMethodForImg}">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                     <StackPanel Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center">
                         <Button Height="30" Content="-" Click="BackImg_Click"></Button>

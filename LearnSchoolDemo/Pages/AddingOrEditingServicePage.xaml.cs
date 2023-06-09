@@ -64,7 +64,7 @@ namespace LearnSchoolDemo.Pages
             }
             else
             {
-                MessageBox.Show("Ошибка в данных", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Все поля должны быть заполнены!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -83,7 +83,7 @@ namespace LearnSchoolDemo.Pages
             }
             catch
             {
-                MessageBox.Show("Необходимо добавить картинку");
+                MessageBox.Show("Файл не распознан! Необходимо добавить картинку!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -140,7 +140,7 @@ namespace LearnSchoolDemo.Pages
             }
             catch
             {
-                MessageBox.Show("Необходимо добавить картинку");
+                MessageBox.Show("Файл не распознан! Необходимо добавить картинку!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

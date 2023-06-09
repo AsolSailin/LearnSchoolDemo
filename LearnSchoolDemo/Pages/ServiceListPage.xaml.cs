@@ -37,12 +37,14 @@ namespace LearnSchoolDemo.Pages
                 btnNext.Content = "Выйти";
                 btnAddService.Visibility = Visibility.Visible;
                 btnAddClient.Visibility = Visibility.Visible;
+                btnClientService.Visibility = Visibility.Visible;
             }
             else
             {
                 btnNext.Content = "Войти";
                 btnAddService.Visibility = Visibility.Collapsed;
                 btnAddClient.Visibility = Visibility.Collapsed;
+                btnClientService.Visibility = Visibility.Collapsed;
             }
 
             _services = App.Connection.Service.ToList();
@@ -58,14 +60,16 @@ namespace LearnSchoolDemo.Pages
 
         private void AddingService_Click(object sender, RoutedEventArgs e)
         {
-            NavClass.NextPage(new NavComponentsClass("ДАННЫЕ УСЛУГИ", new AddingOrEditingServicePage(new Service())));
+            NavClass.isRed = false;
+            NavClass.NextPage(new NavComponentsClass("ДОБАВЛЕНИЕ УСЛУГИ", new AddingOrEditingServicePage(new Service())));
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
+            NavClass.isRed = true;
             Button button = sender as Button;
             Service service = button.DataContext as Service;
-            NavClass.NextPage(new NavComponentsClass("ДАННЫЕ УСЛУГИ", new AddingOrEditingServicePage(service)));
+            NavClass.NextPage(new NavComponentsClass("ИЗМЕНЕНИЕ УСЛУГИ", new AddingOrEditingServicePage(service)));
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
@@ -86,7 +90,7 @@ namespace LearnSchoolDemo.Pages
             }
             catch
             {
-                MessageBox.Show("Данная услуга не может быть удалена", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Данная услуга не может быть удалена, так как на нее записаны клиенты", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
